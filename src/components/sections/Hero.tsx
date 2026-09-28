@@ -32,7 +32,6 @@ export function Hero() {
     const lines = section.querySelectorAll(".hero-line");
     const badge = section.querySelector(".hero-badge");
     const card = section.querySelector(".hero-card");
-    const glass = section.querySelector(".hero-glass");
     const logo = section.querySelector(".hero-logo");
 
     gsap.fromTo(
@@ -44,11 +43,6 @@ export function Hero() {
       lines,
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, stagger: 0.12, delay: 0.6, ease: "power3.out" }
-    );
-    gsap.fromTo(
-      glass,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.1, delay: 0.55, ease: "power3.out" }
     );
     gsap.fromTo(
       logo,
@@ -80,14 +74,34 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-gold-light/55 via-gold-light/35 to-gold-light/20 md:bg-gradient-to-r md:from-gold-light/70 md:via-gold-light/35 md:to-gold-light/10 md:to-transparent" />
 
           <div
-            className="hero-glass hero-glass-panel pointer-events-none absolute inset-y-0 right-0 z-[1] hidden w-[96%] md:block lg:w-[94%] xl:w-[92%]"
+            className="pointer-events-none absolute right-0 top-1/2 z-[2] h-[125%] w-[min(100vw,820px)] -translate-y-1/2 translate-x-[38%] bg-white/90 sm:w-[min(88vw,900px)] lg:h-[132%] lg:w-[min(52vw,980px)] lg:translate-x-[36%]"
+            style={{
+              WebkitMaskImage: "url(/images/HEXAGON.png)",
+              maskImage: "url(/images/HEXAGON.png)",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
             aria-hidden
           />
+
+          <div className="hero-logo absolute inset-y-0 right-6 z-10 flex w-[36%] items-center justify-center sm:right-10 sm:w-[32%] lg:right-16 lg:w-[26%]">
+            <div className="w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72">
+              <BrandLogo
+                src={brand.logoNav}
+                className="h-auto w-full object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
+                priority
+              />
+            </div>
+          </div>
 
           <div className="relative z-10 flex min-h-[min(100svh,920px)] flex-col md:min-h-[90vh] lg:flex-row">
             <div className="flex w-full flex-1 flex-col justify-between gap-6 p-4 sm:gap-8 sm:p-6 md:p-10 lg:max-w-[58%] lg:p-12 xl:max-w-[55%]">
               <div className="pt-4 sm:pt-8 md:pt-16 lg:pt-20">
-                <span className="hero-badge inline-flex max-w-full rounded-full border border-white/30 bg-white/15 px-2.5 py-1.5 text-[10px] font-medium leading-snug text-white backdrop-blur-sm sm:px-3.5 sm:text-xs">
+                <span className="hero-badge inline-flex max-w-full rounded-full border border-white/30 bg-white/15 px-2.5 py-1.5 text-[10px] font-medium leading-snug text-white sm:px-3.5 sm:text-xs">
                   Dubai HQ · Ground operations · Trade · MICE
                 </span>
                 <h1 className="mt-4 font-display text-display-lg font-semibold text-white sm:mt-5 md:mt-6">
@@ -100,16 +114,6 @@ export function Hero() {
                   {brand.tagline}. On-ground delivery for tour operators, agencies
                   and incentive houses — proposal within 24 business hours.
                 </p>
-              </div>
-
-              <div className="hero-logo flex justify-center py-2 lg:hidden">
-                <div className="w-36 sm:w-48">
-                  <BrandLogo
-                    src={brand.logoNav}
-                    className="h-auto w-full object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
-                    priority
-                  />
-                </div>
               </div>
 
               <div className="hero-card w-full max-w-xl rounded-2xl bg-white p-4 shadow-xl sm:p-5 md:p-6">
@@ -134,16 +138,6 @@ export function Hero() {
                     WhatsApp trade desk
                   </Link>
                 </div>
-              </div>
-            </div>
-
-            <div className="hero-logo relative z-10 hidden w-full items-center justify-center px-8 py-10 lg:flex lg:w-[42%] xl:w-[45%]">
-              <div className="w-64 xl:w-80 2xl:w-96">
-                <BrandLogo
-                  src={brand.logoNav}
-                  className="h-auto w-full object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
-                  priority
-                />
               </div>
             </div>
           </div>
