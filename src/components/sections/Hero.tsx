@@ -74,7 +74,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-gold-light/55 via-gold-light/35 to-gold-light/20 md:bg-gradient-to-r md:from-gold-light/70 md:via-gold-light/35 md:to-gold-light/10 md:to-transparent" />
 
           <div
-            className="pointer-events-none absolute right-0 top-1/2 z-[2] h-[125%] w-[min(100vw,820px)] -translate-y-1/2 translate-x-[38%] bg-white/90 sm:w-[min(88vw,900px)] lg:h-[132%] lg:w-[min(52vw,980px)] lg:translate-x-[36%]"
+            className="pointer-events-none absolute right-0 top-1/2 z-[2] h-[125%] w-[min(100vw,820px)] -translate-y-1/2 translate-x-[38%] bg-white/70 sm:w-[min(88vw,900px)] lg:h-[132%] lg:w-[min(52vw,980px)] lg:translate-x-[36%]"
             style={{
               WebkitMaskImage: "url(/images/HEXAGON.png)",
               maskImage: "url(/images/HEXAGON.png)",
