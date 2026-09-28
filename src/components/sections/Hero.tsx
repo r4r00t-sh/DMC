@@ -74,7 +74,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-gold-light/55 via-gold-light/35 to-gold-light/20 md:bg-gradient-to-r md:from-gold-light/70 md:via-gold-light/35 md:to-gold-light/10 md:to-transparent" />
 
           <div
-            className="pointer-events-none absolute right-0 top-1/2 z-[2] h-[125%] w-[min(100vw,820px)] -translate-y-1/2 translate-x-[38%] bg-white/70 sm:w-[min(88vw,900px)] lg:h-[132%] lg:w-[min(52vw,980px)] lg:translate-x-[36%]"
+            className="pointer-events-none absolute right-0 top-1/2 z-[2] h-[118%] w-[78%] -translate-y-1/2 translate-x-1/2 bg-white/70 sm:h-[124%] sm:w-[70%] lg:h-[130%] lg:w-[62%]"
             style={{
               WebkitMaskImage: "url(/images/HEXAGON.png)",
               maskImage: "url(/images/HEXAGON.png)",
@@ -88,7 +88,7 @@ export function Hero() {
             aria-hidden
           />
 
-          <div className="hero-logo absolute inset-y-0 right-6 z-10 flex w-[36%] items-center justify-center sm:right-10 sm:w-[32%] lg:right-16 lg:w-[26%]">
+          <div className="hero-logo absolute inset-y-0 right-2 z-10 flex w-[32%] items-center justify-center sm:right-6 sm:w-[28%] lg:right-12 lg:w-[22%]">
             <div className="w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72">
               <BrandLogo
                 src={brand.logoNav}
