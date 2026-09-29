@@ -42,7 +42,7 @@ export function FeaturedOffers() {
   }, []);
 
   return (
-    <Section ref={sectionRef} className="bg-canvas">
+    <Section ref={sectionRef} className="hidden bg-canvas md:block">
       <Container>
         <SectionHeader
           align="split"

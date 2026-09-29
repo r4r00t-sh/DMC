@@ -8,10 +8,10 @@ import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 export function Footer() {
   return (
     <footer id="site-footer" className="w-full bg-purple text-white">
-      <div className="w-full px-5 py-12 sm:px-6 md:px-8 md:py-16 lg:px-10 xl:px-12">
-        <div className="flex w-full flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14 xl:gap-16">
-            <div className="max-w-md shrink-0">
+      <div className="w-full px-5 py-8 sm:px-6 md:px-8 md:py-16 lg:px-10 xl:px-12">
+        <div className="flex w-full flex-col gap-8 md:gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
+          <div className="flex flex-col gap-8 md:gap-10 lg:flex-row lg:items-start lg:gap-14 xl:gap-16">
+            <div className="hidden max-w-md shrink-0 md:block">
               <p className="font-display text-lg font-semibold">
                 Join the partner network
               </p>
@@ -78,14 +78,19 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-10 sm:gap-12 md:gap-14">
+            <div className="grid grid-cols-2 gap-6 md:flex md:flex-wrap md:gap-14">
               <div>
-                <p className="mb-4 text-sm font-semibold text-white/50">
+                <p className="mb-2 text-sm font-semibold text-white/50 md:mb-4">
                   Useful Links
                 </p>
-                <ul className="space-y-2.5">
+                <ul className="space-y-1.5 md:space-y-2.5">
                   {footerNavLinks.map((link) => (
-                    <li key={link.href}>
+                    <li
+                      key={link.href}
+                      className={
+                        link.href.includes("#") ? "hidden md:list-item" : undefined
+                      }
+                    >
                       <Link
                         href={link.href}
                         className="text-sm text-white/80 transition-colors hover:text-white"
@@ -114,7 +119,7 @@ export function Footer() {
               </div>
 
               <div>
-                <p className="mb-4 text-sm font-semibold text-white/50">
+                <p className="mb-2 text-sm font-semibold text-white/50 md:mb-4">
                   Contact Info
                 </p>
                 <ul className="space-y-3 text-sm text-white/80">
@@ -145,7 +150,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex shrink-0 justify-start lg:justify-end">
+          <div className="hidden shrink-0 justify-start md:flex lg:justify-end">
             <Link
               href="/"
               className="flex w-52 items-center justify-center rounded-2xl bg-white p-4 shadow-sm sm:w-60 md:w-72 md:p-5"
@@ -156,7 +161,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex w-full flex-col items-center gap-3 border-t border-white/10 pt-6 text-center text-xs text-white/45 sm:flex-row sm:justify-between sm:text-left">
+        <div className="mt-6 flex w-full flex-col items-center gap-3 border-t border-white/10 pt-4 text-center text-xs text-white/45 md:mt-10 md:flex-row md:justify-between md:pt-6 md:text-left">
           <p>
             © {new Date().getFullYear()} {brand.name.toLowerCase()} · Dubai, UAE
           </p>

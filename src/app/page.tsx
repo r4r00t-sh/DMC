@@ -19,20 +19,25 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Partners />
-      <TrustBar />
-      <Intro />
-      <WhyUs />
-      <WorkingProcess />
-      <Stats />
-      <Destinations />
-      <DestinationMap />
-      <FeaturedOffers />
-      <SampleItineraries limit={2} />
       <Services />
-      <TeamOffices />
-      <Testimonials />
-      <FAQ />
+      <TrustBar />
+      {/* Phone visitors (QR scans) skip the long story. Tablets and desktops keep the full sequence. */}
+      <div className="hidden md:contents">
+        <WhyUs />
+        <WorkingProcess />
+      </div>
+      <FeaturedOffers />
+      <div className="hidden md:contents">
+        <Destinations />
+        <SampleItineraries limit={2} />
+        <DestinationMap />
+        <Intro />
+        <Stats />
+        <Partners />
+        <Testimonials />
+        <TeamOffices />
+        <FAQ />
+      </div>
       <FinalCTA />
     </>
   );

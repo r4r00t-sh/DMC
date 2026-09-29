@@ -14,7 +14,7 @@ export function Services() {
   return (
     <Section id="services" className="bg-canvas">
       <Container>
-        <div className="mb-8 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-10">
+        <div className="mb-4 grid gap-3 md:mb-8 md:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-10">
           <div>
             <p className="mb-2 text-sm font-medium text-purple/70">Capabilities</p>
             <h2 className="font-display text-display-sm font-semibold text-purple md:text-display-md">
@@ -22,13 +22,24 @@ export function Services() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-muted lg:justify-self-end">
-            From FIT ground handling to complex MICE — hover a capability to see
-            how we operate in destination.
+            <span className="md:hidden">
+              Ground capabilities for every partner programme in Dubai.
+            </span>
+            <span className="hidden md:inline">
+              From FIT ground handling to complex MICE — hover a capability to see
+              how we operate in destination.
+            </span>
           </p>
         </div>
 
+        {current && (
+          <p className="mb-3 text-sm leading-relaxed text-muted md:hidden">
+            {current.description}
+          </p>
+        )}
+
         <div className="grid overflow-hidden rounded-3xl border border-ink/[0.08] lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="relative min-h-[280px] bg-purple lg:min-h-[420px]">
+          <div className="relative hidden min-h-[280px] bg-purple md:block lg:min-h-[420px]">
             {services.map((service, i) => (
               <div
                 key={service.id}
@@ -59,15 +70,16 @@ export function Services() {
             )}
           </div>
 
-          <ul className="bg-white p-2 sm:p-3">
+          <ul className="grid grid-cols-2 gap-1 bg-white p-2 md:block md:p-3">
             {services.map((service, i) => (
               <li key={service.id}>
                 <button
                   type="button"
+                  onClick={() => setActive(i)}
                   onMouseEnter={() => setActive(i)}
                   onFocus={() => setActive(i)}
                   className={cn(
-                    "flex w-full items-center justify-between gap-3 rounded-xl px-4 py-3.5 text-left transition-colors",
+                    "flex w-full items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left transition-colors sm:py-3.5",
                     i === active
                       ? "bg-mist/80 text-ink"
                       : "text-ink/55 hover:bg-mist/40 hover:text-ink"
@@ -84,7 +96,7 @@ export function Services() {
                   <ArrowUpRight
                     size={16}
                     className={cn(
-                      "shrink-0 transition-opacity",
+                      "hidden shrink-0 transition-opacity md:block",
                       i === active ? "opacity-100" : "opacity-30"
                     )}
                   />
