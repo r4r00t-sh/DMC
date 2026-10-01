@@ -22,7 +22,7 @@ export function Destinations() {
   }, [filter]);
 
   return (
-    <Section id="destinations" className="bg-canvas">
+    <Section id="destinations" className="bg-white">
       <Container>
         <div className="mb-6 flex flex-col gap-4 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-lg">
@@ -36,7 +36,7 @@ export function Destinations() {
           </div>
           <Link
             href="/destinations"
-            className="inline-flex shrink-0 self-start rounded-full border border-ink/20 px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-purple hover:text-white sm:self-auto"
+            className="inline-flex shrink-0 self-start rounded-full bg-purple px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ink sm:self-auto"
           >
             Explore All Places
           </Link>
@@ -52,7 +52,7 @@ export function Destinations() {
                 "shrink-0 rounded-full px-4 py-2.5 text-sm font-semibold transition-colors",
                 filter === f
                   ? "bg-purple text-white"
-                  : "border border-ink/10 bg-white text-ink/70 hover:border-ink/25"
+                  : "border border-ink/10 bg-mist text-ink/70 hover:border-ink/25"
               )}
             >
               {f}

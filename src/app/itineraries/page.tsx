@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ItinerariesPage() {
   return (
-    <div className="bg-canvas pt-6 lg:pt-8">
+    <div className="bg-purple pt-6 lg:pt-8">
       <SampleItineraries showCta={false} />
     </div>
   );

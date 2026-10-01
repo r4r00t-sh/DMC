@@ -41,23 +41,27 @@ export function WhyUs() {
   }, []);
 
   return (
-    <Section ref={sectionRef} className="bg-canvas">
+    <Section ref={sectionRef} className="bg-purple">
       <Container>
         <SectionHeader
+          light
           eyebrow="Why Winsora"
           title="The destination management advantage"
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-4 lg:gap-8">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-6">
           {whyUs.map((item, i) => {
             const Icon = icons[i] ?? Compass;
             return (
-              <div key={item.title} className="why-item">
-                <Icon size={22} className="text-gold" strokeWidth={1.5} />
-                <h3 className="mt-4 font-display text-xl font-semibold text-ink md:text-[1.35rem]">
+              <div
+                key={item.title}
+                className="why-item rounded-2xl border border-white/15 bg-white/[0.08] p-5"
+              >
+                <Icon size={22} className="text-gold-light" strokeWidth={1.5} />
+                <h3 className="mt-4 font-display text-xl font-semibold text-white md:text-[1.35rem]">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
+                <p className="mt-2 text-sm leading-relaxed text-white/75">
                   {item.description}
                 </p>
               </div>

@@ -10,7 +10,7 @@ export function Testimonials() {
   const [visible, setVisible] = useState(3);
 
   return (
-    <Section id="journal" className="bg-canvas">
+    <Section id="journal" className="bg-mist">
       <Container>
         <div className="mb-8 max-w-xl">
           <h2 className="font-display text-display-sm font-semibold text-purple md:text-display-md">

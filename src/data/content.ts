@@ -10,6 +10,7 @@ export const brand = {
   licence: "DET Tourism Licence · Dubai",
   logo: "/images/logo.jpeg",
   logoNav: "/images/logo_1.png",
+  logoStacked: "/images/logo_stacked.png",
 };
 
 export const navLinks = [
@@ -26,18 +27,17 @@ export const footerNavLinks = [
   { label: "Destinations", href: "/destinations" },
   { label: "Services", href: "/services" },
   { label: "Reviews", href: "/#journal" },
-  { label: "FAQ", href: "/#faq" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ];
 
-export const partnerLogos = [
-  "Voyage Collective",
-  "Northern Routes",
-  "Atlas Incentive",
-  "Meridian Luxury",
-  "Pacific Trade Tours",
-  "Gulf Meeting Desk",
+export const continentsWeOperate = [
+  { name: "Europe", note: "Tour operators and incentive houses" },
+  { name: "Asia", note: "Agencies and wholesalers" },
+  { name: "Middle East", note: "Regional trade desks" },
+  { name: "Africa", note: "Outbound partner programmes" },
+  { name: "Americas", note: "FIT and luxury operators" },
+  { name: "Oceania", note: "Long-haul agency partners" },
 ];
 
 export const accreditations = [
@@ -635,4 +635,4 @@ export const videoPoster =
   "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80";
 
 export const ctaImage =
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80";
+  "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1920&q=80";

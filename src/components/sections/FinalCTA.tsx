@@ -33,20 +33,20 @@ export function FinalCTA() {
   }, []);
 
   return (
-    <Section ref={sectionRef} id="contact" className="bg-canvas" density="tight">
+    <Section ref={sectionRef} id="contact" className="bg-purple" density="tight">
       <Container>
         <div className="relative overflow-hidden rounded-[1.75rem] md:rounded-[2rem]">
-          <div className="relative aspect-[16/9] min-h-[320px] md:aspect-[21/9] md:min-h-[360px]">
+          <div className="relative flex min-h-[22rem] items-center justify-center overflow-hidden sm:min-h-[24rem] md:aspect-[21/9] md:min-h-0">
             <Image
               src={ctaImage}
-              alt="Destination at golden hour"
+              alt="Dubai Marina"
               fill
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-purple/80 via-purple/60 to-ink/50" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 py-12 text-center">
-              <h2 className="cta-reveal max-w-2xl font-display text-display-sm font-semibold text-white md:text-display-md">
+            <div className="absolute inset-0 bg-gradient-to-b from-purple/45 via-purple/60 to-purple/80 md:bg-gradient-to-r md:from-purple/80 md:via-purple/60 md:to-ink/50" />
+            <div className="relative z-10 flex w-full flex-col items-center justify-center px-5 py-10 text-center sm:px-8 sm:py-12">
+              <h2 className="cta-reveal max-w-2xl font-display text-[1.65rem] font-semibold leading-tight text-white sm:text-display-sm md:text-display-md">
                 Partner with our Dubai trade desk
               </h2>
               <p className="cta-reveal mt-3 max-w-md text-sm leading-relaxed text-white/80 md:text-base">

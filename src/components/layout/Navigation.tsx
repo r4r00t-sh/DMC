@@ -48,9 +48,8 @@ export function Navigation() {
           aria-label={`${brand.name} home`}
         >
           <BrandLogo
-            src={brand.logoNav}
-            compact
-            className="h-14 w-14 shrink-0 sm:h-16 sm:w-16"
+            src={brand.logoStacked}
+            className="!h-11 !w-auto sm:!h-[3.25rem]"
             priority
           />
         </Link>

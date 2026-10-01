@@ -12,7 +12,7 @@ export function Services() {
   const current = services[active] ?? services[0];
 
   return (
-    <Section id="services" className="bg-canvas">
+    <Section id="services" className="bg-mist">
       <Container>
         <div className="mb-4 grid gap-3 md:mb-8 md:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-10">
           <div>

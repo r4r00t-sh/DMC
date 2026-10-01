@@ -42,9 +42,10 @@ export function FeaturedOffers() {
   }, []);
 
   return (
-    <Section ref={sectionRef} className="hidden bg-canvas md:block">
+    <Section ref={sectionRef} className="bg-[#241046]">
       <Container>
         <SectionHeader
+          light
           align="split"
           eyebrow="Trade Products"
           title="Signature programmes for partners"

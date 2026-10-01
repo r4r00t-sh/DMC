@@ -137,6 +137,29 @@ a {
   display: none;
 }
 
+.continent-track {
+  animation: continent-marquee 36s linear infinite;
+}
+
+.continent-marquee:hover .continent-track {
+  animation-play-state: paused;
+}
+
+@keyframes continent-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .continent-track {
+    animation: none;
+  }
+}
+
 @layer components {
   .field-input {
     @apply h-11 w-full rounded-xl border border-ink/10 bg-canvas text-sm text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-purple/40;

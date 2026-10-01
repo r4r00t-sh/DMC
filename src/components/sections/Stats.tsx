@@ -41,7 +41,7 @@ export function Stats() {
   }, []);
 
   return (
-    <section className="bg-mist/70 py-10 md:py-12">
+    <section className="bg-[#241046] py-10 md:py-12">
       <Container>
         <div
           ref={gridRef}
@@ -49,10 +49,10 @@ export function Stats() {
         >
           {stats.map((stat) => (
             <div key={stat.label} className="text-center md:px-2">
-              <p className="stat-number font-display text-3xl font-semibold tracking-wide text-purple md:text-4xl">
+              <p className="stat-number font-display text-3xl font-semibold tracking-wide text-gold-light md:text-4xl">
                 0
               </p>
-              <p className="mt-2 text-xs leading-snug text-muted md:text-sm">
+              <p className="mt-2 text-xs leading-snug text-white/75 md:text-sm">
                 {stat.label}
               </p>
             </div>
